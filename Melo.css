@@ -82,9 +82,9 @@ p {
     background-color: #ff3385;
 }
 
-/* Animação do coração sendo desenhado */
+
 .coracao-animado {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     margin-top: 20px;
 }
 
@@ -105,14 +105,14 @@ p {
     }
 }
 
-/* Estilo e animação da frase */
+
 .texto-animado {
     font-size: 28px;
     font-weight: bold;
     color: #ff66b3;
     letter-spacing: 2px;
     animation: fadeIn 3s ease forwards;
-    opacity: 0;  /* Começa invisível */
+    opacity: 0;  
     margin: 20px 0;
 }
 
