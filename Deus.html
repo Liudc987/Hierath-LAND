@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Carta para Você</title>
+    <link rel="stylesheet" href="Melo.css">
+</head>
+<body>
+
+    <div class="carta">
+        <h1>Para a Minha Amada</h1>
+        <div class="coracao">❤️</div>
+        <p>Minha linda,</p>
+        <p>Quero que saiba o quanto você significa para mim. Às vezes, a vida nos coloca desafios, e eu sei que tivemos nossas diferenças. Mas, com todo o meu coração, eu te peço desculpas e quero mostrar que estou pronto para recomeçar. Você é a razão do meu sorriso, e eu nunca quero te perder.</p>
+        <p>Eu te amo mais do que palavras podem expressar. Com você, tudo é mais bonito e, juntos, podemos superar qualquer coisa.</p>
+        <p>Por favor, me perdoe por tudo e me dê uma nova chance. Eu prometo que vou te fazer a pessoa mais feliz do mundo!</p>
+
+        <div class="texto-animado">Eu te amo Hierath</div> <!-- A frase animada -->
+        
+        <div class="coracao">❤️</div>
+        
+        <button class="botao" onclick="desenharCoracao()">Abrir Meu Coração</button>
+
+        <div id="coracao-animado" class="coracao-animado">
+            <!-- Aqui vai o coração em SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" height="150">
+                <path id="coração-path" fill="none" stroke="#ff66b3" stroke-width="3" d="M50 30C40 20 20 20 20 35C20 50 50 70 50 70C50 70 80 50 80 35C80 20 60 20 50 30Z"/>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        function desenharCoracao() {
+            // Exibe o SVG do coração
+            document.getElementById("coracao-animado").style.display = "block";
+            
+            const path = document.getElementById('coração-path');
+            path.style.strokeDasharray = path.getTotalLength();
+            path.style.strokeDashoffset = path.getTotalLength();
+
+            // Animar o traço do coração
+            setTimeout(() => {
+                path.style.transition = "stroke-dashoffset 2s ease";
+                path.style.strokeDashoffset = 0;
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
