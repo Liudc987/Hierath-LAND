@@ -23,7 +23,7 @@
         <button class="botao" onclick="desenharCoracao()">Abrir Meu Coração</button>
 
         <div id="coracao-animado" class="coracao-animado">
-            <!-- Aqui vai o coração em SVG -->
+          
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="150" height="150">
                 <path id="coração-path" fill="none" stroke="#ff66b3" stroke-width="3" d="M50 30C40 20 20 20 20 35C20 50 50 70 50 70C50 70 80 50 80 35C80 20 60 20 50 30Z"/>
             </svg>
@@ -32,14 +32,14 @@
 
     <script>
         function desenharCoracao() {
-            // Exibe o SVG do coração
+            
             document.getElementById("coracao-animado").style.display = "block";
             
             const path = document.getElementById('coração-path');
             path.style.strokeDasharray = path.getTotalLength();
             path.style.strokeDashoffset = path.getTotalLength();
 
-            // Animar o traço do coração
+           
             setTimeout(() => {
                 path.style.transition = "stroke-dashoffset 2s ease";
                 path.style.strokeDashoffset = 0;
